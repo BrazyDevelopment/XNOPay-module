@@ -4,9 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Palette } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
 
-// Define themes as a constant array with literal types
 const themes = ["light", "dark", "cupcake", "bumblebee", "emerald",
 "corporate",
 "synthwave",
@@ -62,16 +60,19 @@ export default function ThemeSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-      <motion.div 
-                      className="absolute top-7 right-1 w-8 h-8 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center cursor-pointer"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.5 }}
-                    >
-                      <Palette size={18} className="" />
-                    </motion.div>
+        <motion.div 
+          className="absolute top-7 right-1 w-8 h-8 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center cursor-pointer"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <Palette size={18} className="" />
+        </motion.div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-black/80 backdrop-blur-md border border-white/10">
+      <DropdownMenuContent 
+        align="end" 
+        className="bg-black/80 backdrop-blur-md border border-white/10 max-h-[400px] overflow-y-auto w-[calc(100vw-3rem)] sm:w-[448px] max-w-[448px]"
+      >
         {themes.map((theme) => (
           <DropdownMenuItem
             key={theme}
