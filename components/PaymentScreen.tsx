@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { QrCode } from './QrCode';
 import { Timer } from './Timer';
 import ThemeSwitcher from './ThemeSwitcher';
-import { Copy, Wallet, CheckCircle2, ExternalLink, RefreshCw, Shield, Zap, Globe } from 'lucide-react';
+import { Copy, Wallet, CheckCircle2, RefreshCw, Shield, Zap, Globe } from 'lucide-react';
 import { PaymentDetails } from '@/types';
 import { 
   Card, 
